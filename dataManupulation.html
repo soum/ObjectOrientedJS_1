@@ -117,6 +117,8 @@ app.renderCell = function (o) {
     return render;
 }
 
+// this needs to be cleaned up
+
 app.associate = x.reduce(function (e, f) {
     var isExisting = e.filter(function (item) {
         return item.groupName == f.name
