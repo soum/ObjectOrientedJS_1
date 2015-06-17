@@ -119,7 +119,9 @@ app.renderCell = function (o) {
 
 // this needs to be cleaned up
 
-app.associate = x.reduce(function (e, f) {
+app.associate = function(_x){
+    var e = [];
+    _x.reduce(function (i, f) {
     var isExisting = e.filter(function (item) {
         return item.groupName == f.name
     })[0];
@@ -131,8 +133,10 @@ app.associate = x.reduce(function (e, f) {
             groupCount: [f.size]
         });
     }
+    
+});
     return e;
-}, []);
+}
 
 app.output = function(a){
     var outputObj = [];
@@ -182,13 +186,13 @@ app.isPalindrome = function(str){
 }
 
 
-console.log(app.output(app.associate))
+console.log(app.output(app.associate(x)))
 $(function(){
 
     $('.inputBody').append(app.renderCell(x));
 
     $('.prescreen-button').on('click', function(){
-        $('.prescreen-output').html(app.displayResult(app.output(app.associate))) 
+        $('.prescreen-output').html(app.displayResult(app.output(app.associate(x)))) 
         // calling the app display result and passing in an object as a parameter
     });
 
