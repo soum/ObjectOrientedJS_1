@@ -128,6 +128,7 @@ app.isPalindrome = function(str){
 
 console.log(app.output(app.associate(x)))
 
+// using $(function(){}) before data binding to ensure DOM is ready
 $(function(){
 
     $('.inputBody').append(app.renderCell(x));
