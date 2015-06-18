@@ -1,0 +1,62 @@
+body{
+font-family: sans-serif;
+}
+.container{
+    width: 100%;
+}
+.dataTable{
+    background: #EAF2D3; 
+    padding : 20px;
+    float:left;
+    width: 45%;
+    border-collapse: collapse;
+    border: 1px solid #98bf21;
+}
+th{
+	background: #98bf21;
+	padding: 10px 0;
+}
+.prescreen-input:nth-child(even) {
+    background: #FFF;
+}
+.box {
+    border-left: 1px solid #98bf21;
+    padding: 4px 10px;
+    text-align:center;
+    width: 30%;
+}
+.input-name{
+    width: 20%;
+    text-align: center;
+}
+.output-container{
+    float:left;
+    margin-left: 20px;
+    width: 50%;
+}
+/* call to action button to render final result*/
+.prescreen-button{
+    background: #FF6600;
+    color: white;
+    border: none;
+    cursor:pointer;
+    padding: 10px 15px;
+    font-size: 15px
+}
+.prescreen-output{
+    border-collapse: collapse;
+    font-size: 20px;
+    width: 80%;
+    margin-top: 20px;
+}
+.prescreen-output td{
+    border-bottom: 1px solid gray;
+    padding: 5px 0 5px 0;
+}
+.output-total{
+    text-align: right;
+    font-size: 30px;
+}
+.prescreen-palindrome{
+    color: red; /*this class is applied to a plandrome at the output*/
+}
