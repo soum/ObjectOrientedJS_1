@@ -1,4 +1,5 @@
-//Assuming this is what I am getting this data back from the server
+//Assuming this is what I am getting back as data from the server
+//I am storing it in a variable in the global scope
 
 var x = [{
     "name": "john",
