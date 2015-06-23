@@ -80,7 +80,7 @@ app.output = function(a){
     for(var i = 0; i < a.length; i++){
         outputObj[i] = {
             name : a[i].groupName,
-            total : app.calculateTotal(a, i)
+            total : this.calculateTotal(a, i)
         }
     }
     return outputObj;
