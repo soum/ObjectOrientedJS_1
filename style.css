@@ -1,12 +1,10 @@
 body{
 font-family: sans-serif;
 }
-.container{
-    width: 100%;
-}
-.dataTable{
+
+.data-table{
     background: #EAF2D3; 
-    padding : 20px;
+    //padding : 20px;
     float:left;
     width: 45%;
     border-collapse: collapse;
@@ -20,7 +18,7 @@ th{
     background: #FFF;
 }
 .box {
-    border-left: 1px solid #98bf21;
+    //border-left: 1px solid #98bf21;
     padding: 4px 10px;
     text-align:center;
     width: 30%;
@@ -36,16 +34,16 @@ th{
 }
 /* call to action button to render final result*/
 .prescreen-button{
-    background: #FF6600;
-    color: white;
-    border: none;
-    cursor:pointer;
-    padding: 10px 15px;
-    font-size: 15px
+    //background: #FF6600;
+    //color: white;
+    //border: none;
+    //cursor:pointer;
+    //padding: 10px 15px;
+    //font-size: 15px
 }
 .prescreen-output{
-    border-collapse: collapse;
-    font-size: 20px;
+    //border-collapse: collapse;
+    //font-size: 20px;
     width: 80%;
     margin-top: 20px;
 }

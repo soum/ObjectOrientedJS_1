@@ -132,7 +132,7 @@ console.log(app.output(app.associate(x)))
 // using $(function(){}) before data binding to ensure DOM is ready
 $(function(){
 
-    $('.inputBody').append(app.renderCell(x));
+    $('.input-body').append(app.renderCell(x));
 
     $('.prescreen-button').on('click', function(){
         $('.prescreen-output').html(app.displayResult(app.output(app.associate(x)))) 
