@@ -29,7 +29,6 @@ var x = [{
 
 // Setting a class
 var container = function () {};
-var app = new container(); // Constructor for container class
 
 // method to render cells on paage load
 // assuming I am making an ajax call to the databse 
@@ -37,7 +36,7 @@ var app = new container(); // Constructor for container class
 // Palindrome check method is called inside this method
 // to check for names which are palindromes
 
-app.renderCell = function (o) {
+container.prototype.renderCell = function (o) {
     var render = '';
     for(var i = 0; i < o.length; i++) {
         render += '<tr class="prescreen-input">';
@@ -53,7 +52,7 @@ app.renderCell = function (o) {
 // and returns a cllection of count for each name
 // The object end up looking like
 
-app.associate = function(_x){
+container.prototype.associate = function(_x){
     var e = [];
     _x.reduce(function (i, f) {
     var isExisting = e.filter(function (item) {
@@ -76,7 +75,7 @@ app.associate = function(_x){
 // which is looped over for drawing cells
 // I am printing this at the console to show the new object
 
-app.output = function(a){
+container.prototype.output = function(a){
     var outputObj = [];
     for(var i = 0; i < a.length; i++){
         outputObj[i] = {
@@ -88,7 +87,7 @@ app.output = function(a){
 }
 
 // method to calculate total count for each person
-app.calculateTotal = function(b,i){
+container.prototype.calculateTotal = function(b,i){
     var out = 0; // intializing it to be an number
     for(var j = 0; j < b[i].groupCount.length; j++){
         out += b[i].groupCount[j];
@@ -97,7 +96,7 @@ app.calculateTotal = function(b,i){
 }
 
 //display the final result
-app.displayResult = function(d){
+container.prototype.displayResult = function(d){
     
     var result = '';
     for(var i = 0; i < d.length; i++){
@@ -115,7 +114,7 @@ app.displayResult = function(d){
 //Palindrome check method.
 //The palindrome names are displayed in red
 
-app.isPalindrome = function(str){
+container.prototype.isPalindrome = function(str){
     var strReverse = str.split('').reverse().join('');
     //Setting the class variable to be an empty string. 
     //if a palindrome it returns 'prescreen-palindrome'
@@ -126,7 +125,7 @@ app.isPalindrome = function(str){
     return exceptionClass;
 }
 
-
+var app = new container(); // Constructor for container class
 console.log(app.output(app.associate(x)))
 
 // using $(function(){}) before data binding to ensure DOM is ready
